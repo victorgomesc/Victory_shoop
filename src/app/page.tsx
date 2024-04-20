@@ -15,13 +15,12 @@ export default function Home() {
   })
 
   return (
-    <div className=" flex w-screen h-screen bg-gray-900">
-      <div className="flex-col gap-6">
-        <div className=" bg-zinc-950 flex flex-center justify-center h-40 w-screen">
+    <div className=" min-h-[100vh] flex items-center justify-center flex-col">
+        <div className=" bg-zinc-950 flex flex-center justify-center w-screen h-screen lg:min-h-[20vh]">
           <div className="w-1/4 flex justify-center items-center">
             <button><Menu size={32} /></button>
           </div>
-          <h1 className=" text-white text-5xl w-2/4 flex
+          <h1 className=" text-white text-6xl w-2/4 flex
             justify-center items-center font-bold">
             Victory Shoop
           </h1>
@@ -111,7 +110,6 @@ export default function Home() {
       
         </div>
     
-      </div>
     </div>
   );
 }
