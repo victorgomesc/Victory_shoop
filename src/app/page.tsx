@@ -4,8 +4,7 @@ import Image from "next/image";
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import { ShoppingCart, Heart, CircleUserRound, Menu, Search, Instagram, Linkedin, Github, Phone, Mail } from 'lucide-react'
-import Link from "next/link";
-import details from "./details";
+
 
 export default function Home() {
 
@@ -55,7 +54,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -75,7 +74,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -93,7 +92,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -111,7 +110,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -129,7 +128,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -148,7 +147,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -171,7 +170,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -189,7 +188,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -207,7 +206,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -225,7 +224,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -243,7 +242,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
@@ -262,7 +261,7 @@ export default function Home() {
             <ShoppingCart />
           </div>
           <div className="flex gap-2 h-10 w-44 rounded">
-            <button onClick={details} className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
+            <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
           </div>
         </div>
