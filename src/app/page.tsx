@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import { ShoppingCart, Heart, CircleUserRound, Menu, Search, Instagram, Linkedin, Github, Phone, Mail } from 'lucide-react'
@@ -27,8 +28,12 @@ export default function Home() {
           <h1 className=" text-5xl font-bold text-white">Victory Store</h1>
         </div>
         <div className=" w-1/4 items-center justify-center flex gap-16">
+          <Link href="/carshopping">
           <ShoppingCart color="white" size={32} />
+          </Link>
+          <Link href="/loginsection">
           <CircleUserRound color="white" size={32}/>
+          </Link>
           <Search color="white" size={32}/>
         </div>
       </div>
@@ -50,12 +55,16 @@ export default function Home() {
           <div className=" w-4/5 mx-auto">
             <p className=" text-center text-black font-bold"> R$85,00/10 x 8,50</p>
           </div>
+          <Link href="/carshopping">
           <div className="flex bg-orange-600 items-center justify-center gap-2 h-10 w-44 rounded-full hover:bg-orange-700">
             <ShoppingCart />
           </div>
+          </Link>
+          <Link href="/details">
           <div className="flex gap-2 h-10 w-44 rounded">
             <button className="rounded-full bg-orange-600 text-black w-full font-bold hover:bg-orange-700">Comprar</button>
           </div>
+          </Link>
           </div>
         </div>
 
