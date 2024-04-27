@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function LoginModal(){
+export default function Cadastro(){
 return(
 <div className="h-screen bg-gradient-to-r from-purple-600 to-red-600 w-screen items-center justify-center">
     <div className=" container object-top max-w-none bg-gray-950 h-32 items-center justify-center flex">
@@ -19,9 +19,11 @@ return(
             <div className="w-1/2 h-full flex flex-col items-center justify-center">
                 <form className="flex flex-col">
                     <label>Digite seu email:</label>
+                    <label>Comfirme seu email:</label>
                     <label>Digite sua senha:</label>
-                    <button>Login</button>
-                    <a href="/cadastrosection">Cadastre-se</a>
+                    <label>Comfirme sua senha:</label>
+                    <button>Cadastre-se</button>
+                    <a href="/loginsection">Login</a>
                 </form>
             </div>
         </div>
