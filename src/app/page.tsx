@@ -12,7 +12,7 @@ export default function Home() {
 
   const [sliderRef] = useKeenSlider({
     slides: {
-      perView: 4.5,
+      perView: 3.5,
       spacing: 30,
     },
   })

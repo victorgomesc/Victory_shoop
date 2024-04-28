@@ -1,9 +1,29 @@
 import { FormEvent, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from '@hookform/resolvers/zod'
+
+
+const createUserFormSchema = z.object({
+  email: z.string().nonempty('O email é obrigatorio').email('Formato do email nao é valido'),
+  password: z.string().min(6, 'A senha precissa de no minimo 6 caracteres'),
+})
+
+type createUserFormData = z.infer<typeof createUserFormSchema>
 
 
 export default function FormCadastro() {
+  const [ output, setOutput] = useState('')
+    const { register, handleSubmit, formState: { errors } } = useForm<createUserFormData>({
+        resolver: zodResolver(createUserFormSchema)
+    })
+
+    function createUser(data: any) {
+        setOutput(JSON.stringify(data, null, 2))
+    }
+
     const [emailValue, setEmailValue] = useState<string>('');
     const [passwordValue, setPasswordValue] = useState<string>('');
 
@@ -15,12 +35,13 @@ export default function FormCadastro() {
     setPasswordValue(event.target.value);
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  /*const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Aqui você pode fazer o que quiser com os dados do formulário, como enviar para um servidor, armazenar localmente, etc.
     console.log('Valor do input:', emailValue);
     console.log('Valor do input:', passwordValue);
-  };
+  }; */
+
     return(
         <div className="max-w-none mt-10 h-4/5 items-center justify-center flex">
         <div className="container w-3/5 bg-white rounded-3xl h-5/6 flex">
@@ -34,17 +55,20 @@ export default function FormCadastro() {
                     <input className="border-solid text-2xl mt-8 border-2 border-sky-200 hover:border-sky-700"
                         type="text"
                         placeholder="exemplo@email.com"
+                        {...register('email')}
                         value={emailValue}
                         onChange={handleEmailChange}
                     />
-                    
+                    {errors.email && <span>{errors.email.message}</span>}
                     <label className="text-3xl mt-16 font-bold">Digite sua senha</label>
                     <input className="border-solid text-2xl mt-8 border-2 border-sky-200 hover:border-sky-700"
                         type="password"
                         placeholder="********"
+                        {...register('password')}
                         value={passwordValue}
                         onChange={handlePassworChange}
                     />
+                    {errors.password && <span>{errors.password.message}</span>}
                     <button type="submit" className="w-44 h-10 mt-10 bg-orange-500 hover:bg-orange-700 font-semibold text-xl rounded-full">Cadastre-se</button>
                     <Link  href="/loginsection">
                     <p className="text-blue-900 hover:text-blue-500 mt-10 font-bold">Login</p>
